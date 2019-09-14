@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+A project created for Udemy Course: Modern React with Redux [2019]. It pulls users and blog posts from a fake api and displays them in blog format. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
