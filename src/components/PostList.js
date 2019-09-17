@@ -7,9 +7,15 @@ class PostList extends Component {
     this.props.fetchPosts();
   }
 
+  renderList(posts) {
+    return posts.map(post => {
+      return <p>{post.title}</p>;
+    });
+  }
+
   render() {
     console.log(this.props.posts);
-    return <div>Post List</div>;
+    return <div>{this.renderList(this.props.posts)}</div>;
   }
 }
 
