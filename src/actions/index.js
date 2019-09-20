@@ -7,10 +7,13 @@ export const fetchPosts = () => async dispatch => {
   dispatch({ type: 'FETCH_POSTS', payload: response.data });
 };
 
-export const fetchUser = id => dispatch => _fetchUser(id, dispatch);
-
-// memoized version of request to reduce number of requests made
-const _fetchUser = _.memoize(async (id, dispatch) => {
+export const fetchUser = id => async dispatch => {
   const response = await jsonPlaceholder.get(`/users/${id}`);
   dispatch({ type: 'FETCH_USER', payload: response.data });
-});
+};
+
+// // memoized version of request to reduce number of requests made
+// const _fetchUser = _.memoize(async (id, dispatch) => {
+//   const response = await jsonPlaceholder.get(`/users/${id}`);
+//   dispatch({ type: 'FETCH_USER', payload: response.data });
+// });
